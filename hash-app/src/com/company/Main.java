@@ -9,9 +9,12 @@ public class Main {
         Person p1 = new Person();
         p1.setId(555);
         p1.setName("Bob");
+        System.out.println(p1.hashCode());
         Person p2 = new Person();
         p2.setId(100);
         p2.setName("John");
+
+        System.out.println(p2.hashCode());
         System.out.println(p1.equals(p2));
 
         Person p3 = p2;
@@ -44,6 +47,7 @@ class Person {
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
         return id == person.id && Objects.equals(name, person.name);
+
     }
 
 
